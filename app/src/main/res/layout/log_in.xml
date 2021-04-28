@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
+
+        <TextView
+            android:id="@+id/WelcomeLI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:shadowColor="#999999"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="4"
+            android:text="EduTrading"
+            android:textColor="#ffffff"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonLogInLI"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.24" />
+
+        <EditText
+            android:id="@+id/editTextEmailLI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="87dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextPasswordLI"
+            app:layout_constraintEnd_toEndOf="@+id/WelcomeLI"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toStartOf="@+id/WelcomeLI"
+            app:layout_constraintTop_toBottomOf="@+id/WelcomeLI"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/editTextPasswordLI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="330dp"
+            android:layout_marginBottom="319dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/editTextEmailLI"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextEmailLI"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/buttonLogInLI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="58dp"
+            android:layout_marginBottom="39dp"
+            android:background="#4CAF50"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Log In"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/textregistermessLI"
+            app:layout_constraintEnd_toEndOf="@+id/editTextPasswordLI"
+            app:layout_constraintStart_toStartOf="@+id/editTextPasswordLI"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPasswordLI" />
+
+        <TextView
+            android:id="@+id/textregistermessLI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="548dp"
+            android:layout_marginBottom="164dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Don't Have an Account?"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/buttonLogInLI"
+            app:layout_constraintStart_toStartOf="@+id/buttonLogInLI"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonRegisterLI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="#4CAF50"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Sign Up"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textregistermessLI"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="@+id/textregistermessLI"
+            app:layout_constraintTop_toBottomOf="@+id/textregistermessLI"
+            app:layout_constraintVertical_bias="0.161" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

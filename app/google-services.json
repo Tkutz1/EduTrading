@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "844155257427",
+    "project_id": "edutrading-d07cb",
+    "storage_bucket": "edutrading-d07cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844155257427:android:1d4947e4278d1b94fcbca6",
+        "android_client_info": {
+          "package_name": "com.example.edutrading"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844155257427-odrfpq0bc63f58fvki1f9k1uq293iamv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABqxaLW2YLNBw_ai_raQX0CpesrE-yUkA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844155257427-odrfpq0bc63f58fvki1f9k1uq293iamv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
