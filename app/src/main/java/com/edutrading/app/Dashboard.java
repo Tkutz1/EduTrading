@@ -2,42 +2,27 @@ package com.edutrading.app;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import com.google.firebase.auth.FirebaseAuth;
 
 
 public class Dashboard extends Main {
-    private TextView nameText;
-    private LinearLayout profile, alert, map, calendar, addsession,sessionList,logout;
-    private String uid;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        LinearLayout profile, alert, tips, Stock,logout;
+        TextView nameText;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dashboard);
-
         nameText = findViewById(R.id.textView1);
         nameText.setText("Loading...");
         Intent i = getIntent();
         Bundle b = i.getExtras();
 
-
-        map = (LinearLayout) findViewById(R.id.maplayout4);
-        map.setEnabled(false);
-        map.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(Dashboard.this,"Tips4 successful",Toast.LENGTH_LONG).show();
-                openTips();
-            }
-        });
 
         //Logout button
         logout = (LinearLayout) findViewById(R.id.logoutsess6);
@@ -48,8 +33,6 @@ public class Dashboard extends Main {
             }
         });
 
-
-
         //Profile button
         profile = (LinearLayout) findViewById(R.id.profilelaylout1);
         profile.setOnClickListener(new View.OnClickListener() {
@@ -59,7 +42,7 @@ public class Dashboard extends Main {
             }
         });
 
-        //Message button
+        //Alert button
           alert = (LinearLayout) findViewById(R.id.messagelayout2);
           alert.setOnClickListener(new View.OnClickListener() {
               @Override
@@ -68,9 +51,17 @@ public class Dashboard extends Main {
               }
           });
 
+        Stock = (LinearLayout) findViewById(R.id.StockButton);
+        Stock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openStocks();
+            }
+        });
+
         // Tips button
-        profile = (LinearLayout) findViewById(R.id.tipbutton);
-        profile.setOnClickListener(new View.OnClickListener() {
+        tips = (LinearLayout) findViewById(R.id.tipbutton);
+        tips.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openTips();
@@ -87,9 +78,11 @@ public class Dashboard extends Main {
         startActivity(intent);
         finish();
     }
-    //Map button
-    public void openMapActivity(){
-
+    //Stocks button
+    public void openStocks(){
+        Intent intent = new Intent(Dashboard.this, Stocks.class);
+        startActivity(intent);
+        finish();
     }
     // Stocks Button
     public void openTips() {

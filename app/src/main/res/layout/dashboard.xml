@@ -125,7 +125,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/bankcardId3"
+                    android:id="@+id/stockButtonlayer"
                     android:layout_width="160dp"
                     android:layout_height="190dp"
                     android:layout_margin="10dp"
@@ -134,7 +134,7 @@
                     android:padding="0dp">
 
                     <LinearLayout
-                        android:id="@+id/maplayout4"
+                        android:id="@+id/StockButton"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:clickable="true"

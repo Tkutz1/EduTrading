@@ -11,12 +11,12 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class ChangePassword extends Main{
-    private Button Return, Logout, Submit;
     private String Password, NewPassword;
     private EditText PassText, NewPassText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Button Return, Logout, Submit;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.change_password);
         Return = findViewById(R.id.returnbutton3);

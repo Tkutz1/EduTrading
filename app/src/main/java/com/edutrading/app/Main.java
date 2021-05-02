@@ -23,12 +23,12 @@ import java.util.ArrayList;
 
 public class Main extends AppCompatActivity {
     private EditText email_SI, password_SI;
-    private Button SignUp_SI, LogIn_SI;
     private ProgressDialog progressDialog;
     private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Button SignUp_SI, LogIn_SI;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.log_in);
         firebaseAuth = FirebaseAuth.getInstance();
@@ -37,11 +37,7 @@ public class Main extends AppCompatActivity {
         LogIn_SI = findViewById(R.id.buttonLogInLI);
         progressDialog = new ProgressDialog(this);
         SignUp_SI= findViewById(R.id.buttonRegisterLI);
-
-
-
         LogIn_SI.setOnClickListener(new View.OnClickListener(){
-
             @Override
             public void onClick(View v){
                 Login();
@@ -91,6 +87,5 @@ public class Main extends AppCompatActivity {
                 progressDialog.dismiss();
             }
         });
-
     }
 }

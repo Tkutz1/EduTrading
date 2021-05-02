@@ -25,6 +25,7 @@
         <activity android:name=".ChangeEmail" />
         <activity android:name=".ChangePassword" />
         <activity android:name=".Alerts" />
+        <activity android:name=".Stocks" />
     </application>
 
 </manifest>
