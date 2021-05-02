@@ -21,6 +21,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+
 import java.util.ArrayList;
 
 
@@ -51,25 +52,18 @@ public class Signup extends Main {
 
             @Override
             public void onClick(View v){
-
                 Register();
-
             }
-
-
         });
 
         LogIn_SU.setOnClickListener(new View.OnClickListener(){
-
             @Override
             public void onClick(View v){
                 Intent intent = new Intent(Signup.this, Main.class);
                 startActivity(intent);
                 finish();
             }
-
         });
-
 
 
     }
@@ -116,9 +110,8 @@ public class Signup extends Main {
                     final FirebaseUser user = auth.getCurrentUser();
                     final String uid = user.getUid();
                     Log.d("Signup Activity","UID = "+uid);
-               //     intent.putExtra("userEmail",email);
-                   // intent.putExtra("userID",uid);
-                 //   startActivity(intent);
+                    Intent intent = new Intent(Signup.this, Main.class);
+                    startActivity(intent);
                     finish();
 
                 }

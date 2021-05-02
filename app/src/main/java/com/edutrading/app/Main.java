@@ -45,16 +45,10 @@ public class Main extends AppCompatActivity {
 
             @Override
             public void onClick(View v){
-
                 Login();
-
             }
-
-
         });
-
         SignUp_SI.setOnClickListener(new View.OnClickListener(){
-
             @Override
             public void onClick(View v){
                 Intent intent = new Intent(Main.this, Signup.class);
@@ -91,7 +85,7 @@ public class Main extends AppCompatActivity {
                     final FirebaseAuth auth = FirebaseAuth.getInstance();
                     final FirebaseUser userAuth = auth.getCurrentUser();
                     final String uid = userAuth.getUid();
-                    Toast.makeText(Main.this,"Log-in successful",Toast.LENGTH_LONG).show();
+                    Toast.makeText(Main.this,"LogIn successful",Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(Main.this, Dashboard.class);
                     Log.d("MainActivity", "jumping to find user function...");
 
@@ -104,7 +98,7 @@ public class Main extends AppCompatActivity {
 
                 }
                 else{
-                    Toast.makeText(Main.this,"Log In fail!",Toast.LENGTH_LONG).show();
+                    Toast.makeText(Main.this,"LogIn Failed",Toast.LENGTH_LONG).show();
                 }
                 progressDialog.dismiss();
             }

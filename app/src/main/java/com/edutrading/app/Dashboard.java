@@ -14,10 +14,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 
 public class Dashboard extends Main {
-    //private ImageButton profile, message, map, calendar,addsession, sessionList, logout;
     private TextView nameText;
     private LinearLayout profile, message, map, calendar, addsession,sessionList,logout;
-    //public static Student user;
     private String uid;
 
     @Override
@@ -36,6 +34,8 @@ public class Dashboard extends Main {
         map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(Dashboard.this,"Tips4 successful",Toast.LENGTH_LONG).show();
+                openTips();
             }
         });
 
@@ -44,7 +44,7 @@ public class Dashboard extends Main {
         logout.setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View v){
-             //   LogOut();
+             LogOut();
             }
         });
 
@@ -52,31 +52,30 @@ public class Dashboard extends Main {
 
         //Profile button
         profile = (LinearLayout) findViewById(R.id.profilelaylout1);
-        profile.setEnabled(false);
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             //   openProfileActivity();
+                openProfile();
             }
         });
 
         //Message button
-        message = (LinearLayout) findViewById(R.id.messagelayout2);
-        message.setEnabled(false);
-        message.setOnClickListener(new View.OnClickListener() {
+       // message = (LinearLayout) findViewById(R.id.messagelayout2);
+      //  message.setEnabled(false);
+       // message.setOnClickListener(new View.OnClickListener() {
+        //    @Override
+         //   public void onClick(View v) {
+         //       Toast.makeText(Dashboard.this,"Tips1 successful ",Toast.LENGTH_LONG).show();
+         //       openTips();
+        //    }
+     //   });
+
+        // Tips button
+        profile = (LinearLayout) findViewById(R.id.tipbutton);
+        profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            //    openMessageActivity();
-            }
-        });
-
-        // Stocks button
-        sessionList = (LinearLayout) findViewById(R.id.mysesslayout5);
-        sessionList.setEnabled(false);
-        sessionList.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-          //      openStocks();
+                openTips();
             }
         });
     }
@@ -97,10 +96,11 @@ public class Dashboard extends Main {
     }
 
     // Stocks Button
-    public void openStocks() {
-
+    public void openTips() {
+        Intent intent = new Intent(Dashboard.this, Tips.class);
+        startActivity(intent);
+        finish();
     }
-
     //Message button
     public void openMessageActivity(){
 
@@ -108,8 +108,10 @@ public class Dashboard extends Main {
 
 
     //Profile button
-    public void openProfileActivity(){
-
+    public void openProfile(){
+        Intent intent = new Intent(Dashboard.this, Profile.class);
+        startActivity(intent);
+        finish();
     }
 
 
