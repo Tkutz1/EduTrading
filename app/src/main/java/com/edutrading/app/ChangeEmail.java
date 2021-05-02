@@ -45,7 +45,7 @@ public class ChangeEmail extends Main{
         Submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Email = findViewById(R.id.reeditPassword);
+                Email = findViewById(R.id.editEmail);
                 NewEmail = findViewById(R.id.reeditEmail);
                 EmailStr = Email.getText().toString();
                 NewEmailStr = NewEmail.getText().toString();
@@ -54,7 +54,7 @@ public class ChangeEmail extends Main{
                     return;
                 }
                 else if(TextUtils.isEmpty(NewEmailStr)){
-                    NewEmail.setError("Re-Enter Password");
+                    NewEmail.setError("Re-Enter Email");
                     return;
                 }
                 else if(!EmailStr.equals(NewEmailStr)){
