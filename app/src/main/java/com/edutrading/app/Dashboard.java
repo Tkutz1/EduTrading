@@ -15,7 +15,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Dashboard extends Main {
     private TextView nameText;
-    private LinearLayout profile, message, map, calendar, addsession,sessionList,logout;
+    private LinearLayout profile, alert, map, calendar, addsession,sessionList,logout;
     private String uid;
 
     @Override
@@ -60,15 +60,13 @@ public class Dashboard extends Main {
         });
 
         //Message button
-       // message = (LinearLayout) findViewById(R.id.messagelayout2);
-      //  message.setEnabled(false);
-       // message.setOnClickListener(new View.OnClickListener() {
-        //    @Override
-         //   public void onClick(View v) {
-         //       Toast.makeText(Dashboard.this,"Tips1 successful ",Toast.LENGTH_LONG).show();
-         //       openTips();
-        //    }
-     //   });
+          alert = (LinearLayout) findViewById(R.id.messagelayout2);
+          alert.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                  openAlerts();
+              }
+          });
 
         // Tips button
         profile = (LinearLayout) findViewById(R.id.tipbutton);
@@ -89,31 +87,27 @@ public class Dashboard extends Main {
         startActivity(intent);
         finish();
     }
-
     //Map button
     public void openMapActivity(){
 
     }
-
     // Stocks Button
     public void openTips() {
         Intent intent = new Intent(Dashboard.this, Tips.class);
         startActivity(intent);
         finish();
     }
-    //Message button
-    public void openMessageActivity(){
-
+    //Alerts button
+    public void openAlerts(){
+        Intent intent = new Intent(Dashboard.this, Alerts.class);
+        startActivity(intent);
+        finish();
     }
-
-
     //Profile button
     public void openProfile(){
         Intent intent = new Intent(Dashboard.this, Profile.class);
         startActivity(intent);
         finish();
     }
-
-
 
 }

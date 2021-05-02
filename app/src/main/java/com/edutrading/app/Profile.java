@@ -20,14 +20,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Profile extends AppCompatActivity {
-    private TextView Liquidtext, Assettext;
-    private Button email, password, Return, Logout;
     PieChart pieChart;
     PieData pieData;
     List<PieEntry> pieEntryList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Button email, password, Return, Logout;
+        TextView Liquidtext, Assettext;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile);
         Liquidtext = (TextView)findViewById(R.id.LiquidText);

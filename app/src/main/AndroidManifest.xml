@@ -24,6 +24,7 @@
         <activity android:name=".Profile" />
         <activity android:name=".ChangeEmail" />
         <activity android:name=".ChangePassword" />
+        <activity android:name=".Alerts" />
     </application>
 
 </manifest>

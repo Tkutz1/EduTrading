@@ -22,7 +22,6 @@ import com.google.firebase.auth.FirebaseUser;
 import java.util.ArrayList;
 
 public class Main extends AppCompatActivity {
-
     private EditText email_SI, password_SI;
     private Button SignUp_SI, LogIn_SI;
     private ProgressDialog progressDialog;
@@ -55,13 +54,8 @@ public class Main extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-
-
-
         });
-
     }
-
 
     private void Login(){
         String email = email_SI.getText().toString();
@@ -74,7 +68,6 @@ public class Main extends AppCompatActivity {
             password_SI.setError("Enter Your Password");
             return;
         }
-
         progressDialog.setMessage("Please Wait...");
         progressDialog.show();
         progressDialog.setCanceledOnTouchOutside(false);
@@ -85,17 +78,12 @@ public class Main extends AppCompatActivity {
                     final FirebaseAuth auth = FirebaseAuth.getInstance();
                     final FirebaseUser userAuth = auth.getCurrentUser();
                     final String uid = userAuth.getUid();
-                    Toast.makeText(Main.this,"LogIn successful",Toast.LENGTH_LONG).show();
+                    Toast.makeText(Main.this,"LogIn Successful",Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(Main.this, Dashboard.class);
                     Log.d("MainActivity", "jumping to find user function...");
-
-
-
-
                     intent.putExtra("userID", uid);
                     startActivity(intent);
                     finish();
-
                 }
                 else{
                     Toast.makeText(Main.this,"LogIn Failed",Toast.LENGTH_LONG).show();
@@ -105,7 +93,4 @@ public class Main extends AppCompatActivity {
         });
 
     }
-
-
-
 }

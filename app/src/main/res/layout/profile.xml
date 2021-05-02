@@ -55,6 +55,7 @@
         android:layout_marginRight="24dp"
         android:text="Logout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/ProfileText"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -77,11 +78,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="73dp"
-        android:layout_marginEnd="128dp"
-        android:layout_marginRight="128dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginRight="160dp"
         android:layout_marginBottom="85dp"
         android:fontFamily="sans-serif-black"
-        android:text="ProfileText"
+        android:text="Profile"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/textView5"

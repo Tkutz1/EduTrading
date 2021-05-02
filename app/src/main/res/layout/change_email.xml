@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editEmail"
+        android:id="@+id/reeditEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="87dp"
@@ -68,7 +68,7 @@
         android:textColor="#ffffff"
         android:textColorHint="#ffffff"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/editEmail"
+        app:layout_constraintBottom_toTopOf="@+id/reeditEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/returnbutton3" />
