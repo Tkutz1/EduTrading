@@ -33,9 +33,6 @@ public class StockService {
         String DIS_price = getPrice(DIS_url);
         String AMZN_price = getPrice(AMZN_url);
         String FB_price = getPrice(FB_url);
-
-
-
     }
 
     public static String getPrice(URL url) throws IOException{
@@ -50,7 +47,6 @@ public class StockService {
                 int target = line.indexOf("progress__label snapshot__price-label");
                 int deci = line.indexOf(".",target);
                 int start = deci;
-
                 while(line.charAt(start) != '>'){
                     start--;
                 }
@@ -58,7 +54,6 @@ public class StockService {
             }
             line = buff.readLine();
         }
-
         return price;
 
     }

@@ -3,6 +3,7 @@ package com.edutrading.app;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -54,6 +55,7 @@ public class Tips extends AppCompatActivity implements AdapterView.OnItemSelecte
     });
         dropdown.setOnItemSelectedListener(this);
 }
+    @SuppressLint("SetTextI18n")
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id){
 
@@ -76,16 +78,23 @@ public class Tips extends AppCompatActivity implements AdapterView.OnItemSelecte
                         "\n\nAvoid trading around market open or near market close due to high volatility.");
                 break;
             case 4:
-                tiptext.setText("Stocks can be bought or ");
+                tiptext.setText("Stocks can be bought or sold to make a profit on gains in the stock's value. The most that can " +
+                        "be lost on a buy is your initial investment" +
+                        "\n\nIt is also possible to capitalize on dips in value through 'shorts'. " +
+                        "This is highly dangerous has can cost even more than your initial investment if it goes wrong");
                 break;
             case 5:
                 tiptext.setText("Whatever you invest in the stock market can be lost. \n\nSet expectations" +
                         " at a realistic level and ONLY invest what you are capable of losing.");
                 break;
             case 6:
-                tiptext.setText(" ");
+                tiptext.setText("Don't put all your eggs into one basket. Don't put all of your investment" +
+                        " assets into a single stock.\n\nTrading is a calculated process, the more diversity " +
+                        "in your portfolio, the less likely you are to gamble your assets.");
                 break;
             case 7:
+                tiptext.setText("Resist the temptation to check stock all the time. Let it sit. \n\nDips are normal, " +
+                        "and surges can be misleading. Avoid buying/selling on impulse.");
                 break;
         }
     }
