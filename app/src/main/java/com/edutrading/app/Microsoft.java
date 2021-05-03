@@ -9,6 +9,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.IOException;
+import java.net.URL;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.math.BigDecimal;
@@ -41,7 +44,7 @@ public class Microsoft extends AppCompatActivity {
         Buy = findViewById(R.id.button13);
         Buy.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v){
                 String Value= Amount.getText().toString();
                 int finalValue=Integer.parseInt(Value);
                 if(finalValue <= Money[0])
@@ -53,6 +56,8 @@ public class Microsoft extends AppCompatActivity {
                     bd = bd.round(new MathContext(3));
                     double rounded = bd.doubleValue();
                     Stock.setText("Shares Owned: " + rounded);
+
+
                 }
                 else if (finalValue == 0)
                 {

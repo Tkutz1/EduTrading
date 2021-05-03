@@ -9,6 +9,7 @@ import java.net.URLConnection;
 import java.util.*;
 
 public class StockService {
+
     public static String AAPL_price;
     public static String GME_price;
     public static String TSLA_price;
@@ -80,4 +81,62 @@ public class StockService {
         return price;
 
     }
+
+    public static String getAAPL_price() throws IOException{
+        URL url = new URL("https://markets.businessinsider.com/stocks/aapl-stock");
+        String price = getPrice(url);
+        return price;
+    }
+    public static String getGME_price() throws IOException{
+        URL url = new URL("https://markets.businessinsider.com/stocks/gme-stock");
+        String price = getPrice(url);
+        return price;
+
+    }
+    public static String getTSLA_price() throws IOException{
+        URL url = new URL("https://markets.businessinsider.com/stocks/tsla-stock");
+        String price = getPrice(url);
+        return price;
+    }
+    public static String getMSFT_price() throws IOException{
+        URL url = new URL("https://markets.businessinsider.com/stocks/msft-stock");
+        String price = getPrice(url);
+        return price;
+    }
+    public static String getKO_price() throws IOException{
+        URL url = new URL("https://markets.businessinsider.com/stocks/ko-stock");
+        String price = getPrice(url);
+        return price;
+    }
+    public static String getV_price() throws IOException{
+        URL url = new URL("https://markets.businessinsider.com/stocks/v-stock");
+        String price = getPrice(url);
+        return price;
+    }
+    public static String getWMT_price() throws IOException{
+        URL url = new URL("https://markets.businessinsider.com/stocks/wmt-stock");
+        String price = getPrice(url);
+        return price;
+    }
+    public static String getHD_price() throws IOException{
+        URL url = new URL("https://markets.businessinsider.com/stocks/hd-stock");
+        String price = getPrice(url);
+        return price;
+    }
+    public static String getDIS_price() throws IOException{
+        URL url = new URL("https://markets.businessinsider.com/stocks/dis-stock");
+        String price = getPrice(url);
+        return price;
+    }
+    public static String getAMZN_price() throws IOException{
+        URL url = new URL("https://markets.businessinsider.com/stocks/amzn-stock");
+        String price = getPrice(url);
+        return price;
+    }
+    public static String getFB_price() throws IOException{
+        URL url = new URL("https://markets.businessinsider.com/stocks/fb-stock");
+        String price = getPrice(url);
+        return price;
+    }
+
 }
