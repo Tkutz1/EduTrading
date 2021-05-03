@@ -28,8 +28,10 @@ public class Profile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         Button email, password, Return, Logout;
         String Liquid, Asset;
-        Liquid = "100";
-        Asset = "425";
+        Liquid = String.valueOf(User.getCash());
+        Asset = String.valueOf(User.getAsset());
+        double MSFTNum = User.getMSFTNum();
+        float M = (float)MSFTNum;
         TextView Liquidtext, Assettext;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile);
@@ -39,7 +41,7 @@ public class Profile extends AppCompatActivity {
         Assettext.setText(Asset);
         pieChart = findViewById(R.id.pieChart);
         pieChart.setUsePercentValues(true);
-        pieEntryList.add(new PieEntry(1, "MSFT"));
+        pieEntryList.add(new PieEntry(M, "MSFT"));
         pieEntryList.add(new PieEntry(5, "APPL"));
         pieEntryList.add(new PieEntry(7, "TSLA"));
         pieEntryList.add(new PieEntry(3, "GME"));

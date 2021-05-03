@@ -20,14 +20,11 @@ public class Microsoft extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         Button Return, Logout, Buy, Sell;
         TextView Stock;
-        final double[] Shares = new double[1];
-        final double[] Money = new double[1];
-        Money[0] = 100;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.microsoft);
         Amount = findViewById(R.id.editTextAmount);
-
-
+        double MSFT = User.getMSFTNum();
+        int Money = User.getCash();
         Return = findViewById(R.id.button7);
         Return.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,24 +40,50 @@ public class Microsoft extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String Value= Amount.getText().toString();
-                int finalValue=Integer.parseInt(Value);
-                if(finalValue <= Money[0])
-                {
-                    Toast.makeText(Microsoft.this,"Purchase Complete",Toast.LENGTH_LONG).show();
-                    Shares[0] = (1.0+(finalValue/252.0));
-                    Money[0] = 100-finalValue;
-                    BigDecimal bd = new BigDecimal(Shares[0]);
-                    bd = bd.round(new MathContext(3));
-                    double rounded = bd.doubleValue();
-                    Stock.setText("Shares Owned: " + rounded);
-                }
-                else if (finalValue == 0)
-                {
-                    Toast.makeText(Microsoft.this,"No Value Entered",Toast.LENGTH_LONG).show();
+                if (!Value.equals("")) {
+                    int finalValue = Integer.parseInt(Value);
+                    if (finalValue <= Money) {
+                        Toast.makeText(Microsoft.this, "Purchase Complete", Toast.LENGTH_LONG).show();
+                        User.AddMSFT(finalValue / 252);
+                        User.ChangeCash(finalValue);
+                        BigDecimal bd = new BigDecimal(User.getMSFTNum());
+                        bd = bd.round(new MathContext(3));
+                        double rounded = bd.doubleValue();
+                        Stock.setText("Shares Owned: " + rounded);
+                    }
+                    else
+                    {
+                        Toast.makeText(Microsoft.this,"Not Enough Funds",Toast.LENGTH_LONG).show();
+                    }
                 }
                 else
                 {
-                    Toast.makeText(Microsoft.this,"Not Enough Funds",Toast.LENGTH_LONG).show();
+                    Toast.makeText(Microsoft.this,"No Value Entered",Toast.LENGTH_LONG).show();
+                }
+
+            }
+        });
+        Sell = findViewById(R.id.button14);
+        Sell.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String Value = Amount.getText().toString();
+                if (!Value.equals("")) {
+                    int finalValue = Integer.parseInt(Value);
+                    if (finalValue <= MSFT) {
+                        Toast.makeText(Microsoft.this, "Sale Complete", Toast.LENGTH_LONG).show();
+                        User.SubCash(finalValue * 252);
+                        User.SubMSFT(finalValue);
+                        BigDecimal bd = new BigDecimal(User.getMSFTNum());
+                        bd = bd.round(new MathContext(3));
+                        double rounded = bd.doubleValue();
+                        Stock.setText("Shares Owned: " + rounded);
+                    } else {
+                        Toast.makeText(Microsoft.this, "Not Enough Shares", Toast.LENGTH_LONG).show();
+                    }
+                }
+                else {
+                    Toast.makeText(Microsoft.this, "No Value Entered", Toast.LENGTH_LONG).show();
                 }
             }
         });

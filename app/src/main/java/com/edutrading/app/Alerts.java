@@ -44,6 +44,8 @@ public class Alerts extends AppCompatActivity {
         Alert2 = (TextView)findViewById(R.id.textView6);
         Alert3 = (TextView)findViewById(R.id.textView9);
         Alert4 = (TextView)findViewById(R.id.textView8);
+
+
         Clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
