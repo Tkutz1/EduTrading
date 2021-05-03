@@ -78,7 +78,7 @@
         android:layout_width="299dp"
         android:layout_height="59dp"
         android:fontFamily="sans-serif-black"
-        android:text="Sample Alert"
+        android:text="TSLA Up - 4%"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textView8"
@@ -89,11 +89,12 @@
         android:id="@+id/textView9"
         android:layout_width="299dp"
         android:layout_height="59dp"
+        android:layout_marginBottom="268dp"
         android:fontFamily="sans-serif-black"
-        android:text="Sample Alert"
+        android:text="MSFT Up - 5%"
         android:textColor="#000000"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -102,7 +103,7 @@
         android:layout_width="299dp"
         android:layout_height="59dp"
         android:fontFamily="sans-serif-black"
-        android:text="Sample Alert"
+        android:text="GME Down - 12%"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textView9"
@@ -110,24 +111,12 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView10"
-        android:layout_width="299dp"
-        android:layout_height="59dp"
-        android:layout_marginBottom="208dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Sample Alert"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
         android:id="@+id/textView4"
         android:layout_width="299dp"
         android:layout_height="59dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif-black"
-        android:text="Sample Alert"
+        android:text="APPL Down - 2%"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textView6"

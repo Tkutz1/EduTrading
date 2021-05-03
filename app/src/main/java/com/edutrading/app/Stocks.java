@@ -14,7 +14,7 @@ public class Stocks extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Button Return, Logout;
+        Button Return, Logout, MSFT, APPL, TSLA;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.stocks);
         Return = findViewById(R.id.button5);
@@ -22,6 +22,15 @@ public class Stocks extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Stocks.this, Dashboard.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        MSFT = findViewById(R.id.button9);
+        MSFT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Stocks.this, Microsoft.class);
                 startActivity(intent);
                 finish();
             }

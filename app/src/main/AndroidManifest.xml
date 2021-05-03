@@ -26,6 +26,7 @@
         <activity android:name=".ChangePassword" />
         <activity android:name=".Alerts" />
         <activity android:name=".Stocks" />
+        <activity android:name=".Microsoft" />
     </application>
 
 </manifest>

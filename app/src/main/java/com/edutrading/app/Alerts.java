@@ -44,7 +44,6 @@ public class Alerts extends AppCompatActivity {
         Alert2 = (TextView)findViewById(R.id.textView6);
         Alert3 = (TextView)findViewById(R.id.textView9);
         Alert4 = (TextView)findViewById(R.id.textView8);
-        Alert5 = (TextView)findViewById(R.id.textView10);
         Clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,7 +51,6 @@ public class Alerts extends AppCompatActivity {
                 Alert2.setText(" ");
                 Alert3.setText(" ");
                 Alert4.setText(" ");
-                Alert5.setText(" ");
             }
         });
     }

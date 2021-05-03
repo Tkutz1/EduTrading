@@ -27,13 +27,16 @@ public class Profile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Button email, password, Return, Logout;
+        String Liquid, Asset;
+        Liquid = "100";
+        Asset = "425";
         TextView Liquidtext, Assettext;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile);
         Liquidtext = (TextView)findViewById(R.id.LiquidText);
         Assettext = (TextView)findViewById(R.id.StockText);
-        Liquidtext.setText("$100");
-        Assettext.setText("$430");
+        Liquidtext.setText(Liquid);
+        Assettext.setText(Asset);
         pieChart = findViewById(R.id.pieChart);
         pieChart.setUsePercentValues(true);
         pieEntryList.add(new PieEntry(1, "MSFT"));

@@ -10,23 +10,27 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
         android:fontFamily="sans-serif-black"
         android:text="Stock Market"
         android:textColor="#FFFFFF"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.171" />
+        app:layout_constraintTop_toTopOf="@+id/button5" />
+
 
     <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
         android:background="#FFFFFF"
         android:text="Return"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,10 +40,119 @@
         android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
         android:text="Logout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/imageViewmsft"
+                    android:layout_width="match_parent"
+                    android:layout_height="214dp"
+                    app:srcCompat="@drawable/microsoft" />
+
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginRight="3dp"
+                    android:text="MSFT" />
+
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/APPL"
+                android:layout_width="match_parent"
+                android:layout_height="214dp"
+                app:srcCompat="@drawable/apple" />
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginRight="3dp"
+                android:text="APPL" />
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/TSLA"
+                    android:layout_width="match_parent"
+                    android:layout_height="214dp"
+                    app:srcCompat="@drawable/tesla" />
+
+                <Button
+                    android:id="@+id/button11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginRight="3dp"
+                    android:text="TSLA" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/GME"
+                    android:layout_width="match_parent"
+                    android:layout_height="214dp"
+                    app:srcCompat="@drawable/gamestop" />
+
+                <Button
+                    android:id="@+id/button12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginRight="3dp"
+                    android:text="GME" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="30dp"
+                android:background="#c1c1c1"
+                android:src="@drawable/exit" />
+
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
