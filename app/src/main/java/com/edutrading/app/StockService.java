@@ -8,7 +8,19 @@ import java.net.URL;
 import java.net.URLConnection;
 
 public class StockService {
-    public static void main(String[] args) throws IOException{
+    String AAPL_price;
+    String GME_price;
+    String TSLA_price;
+    String MSFT_price;
+    String KO_price;
+    String V_price;
+    String WMT_price;
+    String HD_price;
+    String DIS_price;
+    String AMZN_price;
+    String FB_price;
+
+    public void price() throws IOException{
 
         URL AAPL_url = new URL("https://markets.businessinsider.com/stocks/aapl-stock");
         URL GME_url = new URL("https://markets.businessinsider.com/stocks/gme-stock");
@@ -22,17 +34,20 @@ public class StockService {
         URL AMZN_url = new URL("https://markets.businessinsider.com/stocks/amzn-stock");
         URL FB_url = new URL("https://markets.businessinsider.com/stocks/fb-stock");
 
-        String AAPL_price = getPrice(AAPL_url);
-        String GME_price =  getPrice(GME_url);
-        String TSLA_price = getPrice(TSLA_url);
-        String MSFT_price = getPrice(MSFT_url);
-        String KO_price = getPrice(KO_url);
-        String V_price = getPrice(V_url);
-        String WMT_price = getPrice(WMT_url);
-        String HD_price = getPrice(HD_url);
-        String DIS_price = getPrice(DIS_url);
-        String AMZN_price = getPrice(AMZN_url);
-        String FB_price = getPrice(FB_url);
+        AAPL_price = getPrice(AAPL_url);
+        GME_price =  getPrice(GME_url);
+        TSLA_price = getPrice(TSLA_url);
+        MSFT_price = getPrice(MSFT_url);
+        KO_price = getPrice(KO_url);
+        V_price = getPrice(V_url);
+        WMT_price = getPrice(WMT_url);
+        HD_price = getPrice(HD_url);
+        DIS_price = getPrice(DIS_url);
+        AMZN_price = getPrice(AMZN_url);
+        FB_price = getPrice(FB_url);
+
+
+
     }
 
     public static String getPrice(URL url) throws IOException{
@@ -47,6 +62,7 @@ public class StockService {
                 int target = line.indexOf("progress__label snapshot__price-label");
                 int deci = line.indexOf(".",target);
                 int start = deci;
+
                 while(line.charAt(start) != '>'){
                     start--;
                 }
@@ -54,6 +70,7 @@ public class StockService {
             }
             line = buff.readLine();
         }
+
         return price;
 
     }
