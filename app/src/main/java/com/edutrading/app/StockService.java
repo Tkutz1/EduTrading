@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.*;
 
 public class StockService {
     public static String AAPL_price;
@@ -35,20 +36,24 @@ public class StockService {
         URL AMZN_url = new URL("https://markets.businessinsider.com/stocks/amzn-stock");
         URL FB_url = new URL("https://markets.businessinsider.com/stocks/fb-stock");
 
-        AAPL_price = getPrice(AAPL_url);
-        GME_price =  getPrice(GME_url);
-        TSLA_price = getPrice(TSLA_url);
-        MSFT_price = getPrice(MSFT_url);
-        KO_price = getPrice(KO_url);
-        V_price = getPrice(V_url);
-        WMT_price = getPrice(WMT_url);
-        HD_price = getPrice(HD_url);
-        DIS_price = getPrice(DIS_url);
-        AMZN_price = getPrice(AMZN_url);
-        FB_price = getPrice(FB_url);
-
-
-
+        new Timer().scheduleAtFixedRate(new TimerTask(){
+            @Override
+            public void run(){
+                try {
+                    AAPL_price = getPrice(AAPL_url);
+                    GME_price =  getPrice(GME_url);
+                    TSLA_price = getPrice(TSLA_url);
+                    MSFT_price = getPrice(MSFT_url);
+                    KO_price = getPrice(KO_url);
+                    V_price = getPrice(V_url);
+                    WMT_price = getPrice(WMT_url);
+                    HD_price = getPrice(HD_url);
+                    DIS_price = getPrice(DIS_url);
+                    AMZN_price = getPrice(AMZN_url);
+                    FB_price = getPrice(FB_url);
+                } catch(IOException err){}
+            }
+        },5000,5000);
     }
 
     public static String getPrice(URL url) throws IOException{
