@@ -8,19 +8,30 @@ import java.net.URL;
 import java.net.URLConnection;
 
 public class StockService {
-    String AAPL_price;
-    String GME_price;
-    String TSLA_price;
-    String MSFT_price;
-    String KO_price;
-    String V_price;
-    String WMT_price;
-    String HD_price;
-    String DIS_price;
-    String AMZN_price;
-    String FB_price;
+    public String AAPL_price;
+    public String GME_price;
+    public String TSLA_price;
+    public String MSFT_price;
+    public String KO_price;
+    public String V_price;
+    public String WMT_price;
+    public String HD_price;
+    public String DIS_price;
+    public String AMZN_price;
+    public String FB_price;
 
-    public void price() throws IOException{
+    
+    public StockService(String AAPL_price,
+             String GME_price,
+             String TSLA_price,
+             String MSFT_price,
+             String KO_price,
+             String V_price,
+             String WMT_price,
+             String HD_price,
+             String DIS_price,
+             String AMZN_price,
+             String FB_price) throws IOException{
 
         URL AAPL_url = new URL("https://markets.businessinsider.com/stocks/aapl-stock");
         URL GME_url = new URL("https://markets.businessinsider.com/stocks/gme-stock");
@@ -34,17 +45,17 @@ public class StockService {
         URL AMZN_url = new URL("https://markets.businessinsider.com/stocks/amzn-stock");
         URL FB_url = new URL("https://markets.businessinsider.com/stocks/fb-stock");
 
-        AAPL_price = getPrice(AAPL_url);
-        GME_price =  getPrice(GME_url);
-        TSLA_price = getPrice(TSLA_url);
-        MSFT_price = getPrice(MSFT_url);
-        KO_price = getPrice(KO_url);
-        V_price = getPrice(V_url);
-        WMT_price = getPrice(WMT_url);
-        HD_price = getPrice(HD_url);
-        DIS_price = getPrice(DIS_url);
-        AMZN_price = getPrice(AMZN_url);
-        FB_price = getPrice(FB_url);
+        this.AAPL_price = getPrice(AAPL_url);
+        this.GME_price =  getPrice(GME_url);
+        this.TSLA_price = getPrice(TSLA_url);
+        this.MSFT_price = getPrice(MSFT_url);
+        this.KO_price = getPrice(KO_url);
+        this.V_price = getPrice(V_url);
+        this.WMT_price = getPrice(WMT_url);
+        this.HD_price = getPrice(HD_url);
+        this.DIS_price = getPrice(DIS_url);
+        this.AMZN_price = getPrice(AMZN_url);
+        this.FB_price = getPrice(FB_url);
 
 
 
